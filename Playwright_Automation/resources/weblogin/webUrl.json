@@ -1,0 +1,5 @@
+{
+    "baseURL": "https://web8.dev.zoolwork.com/",
+    "v2Url": "https://sp.dev.zoolwork.com/",
+    "redirectURL": "auth8.dev.zoolwork.com/Account/Login"
+}

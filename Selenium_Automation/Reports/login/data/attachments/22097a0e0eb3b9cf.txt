@@ -1,0 +1,6 @@
+Current web link: https://web8.dev.zoolwork.com/
+Enter button clicked successfully.
+Tenant popup is visible.
+mscan
+Tenant name entered successfully.
+Browser closed.

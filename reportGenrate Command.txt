@@ -1,0 +1,46 @@
+1. Basic Report (Command Line Output)
+pytest your_test_file.py
+2. Generate a More Detailed Report (HTML Report)
+pytest your_test_file.py --html=report.html
+3. Generate an XML Report (JUnit Format)
+pytest your_test_file.py --junitxml=report.xml
+4. Combine Multiple Reports
+pytest your_test_file.py --html=report.html --junitxml=report.xml
+5. Advanced Reporting with Plugins
+pip install allure-pytest
+
+pytest your_test_file.py --alluredir=allure-results
+allure serve allure-results
+6. Generate Console Output with Logging
+pytest your_test_file.py --capture=no --log-cli-level=INFO
+
+pytest --cov=your_module --cov-report=html testLogin.py
+
+
+coverage run -m pytest tests/test_calculator.py
+coverage report -m
+
+pytest testLogin.py --html=login_test_report.html --junitxml=login_test_report.xml
+
+
+Most -> pytest test_Login.py --html-report=reports/login/login.html --title "Login Test Report"
+
+
+
+Allure  report
+set PYTHONPATH=.
+python -m pytest tests/login/login.py --alluredir=allure-results
+
+python -m pytest tests/login/login.py --alluredir=allure-results
+allure serve allure-results
+
+
+--------------------------------------------------------------
+pytest tests/login/test_login.py --alluredir="allure-results"
+
+allure generate allure-results -o "C:/Users/Comm-IT India/OneDrive - comm-it india pvt ltd/Desktop/SahabPayroll/Reports/login" --clean
+
+
+
+tree /F "C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation"
+

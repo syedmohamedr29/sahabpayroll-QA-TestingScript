@@ -1,0 +1,15 @@
+1. Install Playwright into your venv
+
+Activate your venv first:
+
+.venv\Scripts\activate
+
+
+Then install Playwright:
+
+pip install playwright pytest-playwright
+
+
+Also install the browser binaries:
+
+playwright install

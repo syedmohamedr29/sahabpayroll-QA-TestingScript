@@ -1,0 +1,265 @@
+npm init playwright@latest
+
+To integrate **Allure Reporting** with **Pytest** for a **Playwright** project in Python, you can use the `pytest-allure-adaptor` or the more modern `allure-pytest` plugin to generate detailed, interactive HTML reports for your test results. Below is a step-by-step guide to set up Allure reporting with Pytest and Playwright, addressing the context of your previous Playwright test issues and ensuring the code is fixed and formatted correctly.
+
+### Prerequisites
+- **Python 3.8+** installed.
+- **Playwright for Python** installed (`pip install playwright` and `playwright install` for browsers).
+- **Java 8+** installed (required for the Allure command-line tool).
+- A Playwright project with Pytest set up (e.g., your `sampleTestFile.py` from the earlier context).
+
+### Step 1: Install Required Packages
+Install the `allure-pytest` plugin and the Allure command-line tool to generate and view reports.
+
+```bash
+pip install allure-pytest
+npm install -g allure-commandline
+```
+
+- **Notes**:
+  - `allure-pytest` integrates Allure with Pytest, capturing test results and metadata.
+  - The `allure-commandline` tool generates HTML reports from the raw results.
+  - Verify installations:
+    ```bash
+    python -m pip show allure-pytest
+    allure --version
+    ```
+  - If you encounter permission issues on Windows, run the command prompt as Administrator or add `node_modules/.bin` to your PATH.
+
+### Step 2: Configure Pytest to Use Allure
+Update your Pytest configuration to enable the Allure reporter. You can do this via the command line or a `pytest.ini` file.
+
+#### Option 1: Command-Line Configuration
+Run your tests with the Allure reporter enabled, specifying the output directory for Allure results:
+
+```bash
+pytest --alluredir=./allure-results
+```
+
+#### Option 2: Use `pytest.ini`
+Create or edit a `pytest.ini` file in your project root to automatically include the Allure reporter:
+
+```ini
+[pytest]
+addopts = --alluredir=./allure-results
+```
+
+- **Notes**:
+  - The `--alluredir` flag specifies where Allure stores raw result files (JSON format).
+  - You can clean previous results with `--clean-alluredir`:
+    ```bash
+    pytest --alluredir=./allure-results --clean-alluredir
+    ```
+
+### Step 3: Update Your Test Code
+Enhance your Playwright test code to leverage Allure’s features like steps, attachments, and metadata. Below is a fixed version of your earlier test code (`sampleTestFile.py` and `LoginPage`) with Allure annotations to improve reporting, addressing the tenant modal visibility issue.
+
+```python
+import pytest
+from playwright.sync_api import expect, Page
+import os
+import time
+from allure import step, attachment_type, severity, severity_level
+
+class LoginPage:
+    def __init__(self, page: Page):
+        self.page = page
+        # More robust locators
+        self.enterButton = page.locator('button:has-text("Enter")')  # Adjust based on actual button
+        self.tenantModal = page.locator('//div[contains(@class, "modal-content")]')  # Flexible XPath
+
+    @step("Click Enter button")
+    def enterButtonClick(self):
+        try:
+            expect(self.enterButton).to_be_visible(timeout=5000)
+            expect(self.enterButton).to_be_enabled(timeout=5000)
+            self.enterButton.click()
+            print("✅ Enter button clicked successfully")
+            time.sleep(1)  # Small wait for modal rendering
+            # Attach page screenshot
+            self.page.screenshot(path="enter_button_screenshot.png")
+            with open("enter_button_screenshot.png", "rb") as f:
+                allure.attach(f.read(), name="Enter Button Click", attachment_type=attachment_type.PNG)
+        except Exception as e:
+            screenshot_path = f"screenshots/enter_button_error_{int(time.time())}.png"
+            os.makedirs(os.path.dirname(screenshot_path), exist_ok=True)
+            self.page.screenshot(path=screenshot_path)
+            with open(screenshot_path, "rb") as f:
+                allure.attach(f.read(), name="Enter Button Error", attachment_type=attachment_type.PNG)
+            pytest.fail(f"Enter button click failed: {e}")
+
+    @step("Verify Tenant popup visibility")
+    def tenantPopupVisible(self):
+        try:
+            expect(self.tenantModal).to_be_visible(timeout=15000)
+            print("✅ Tenant popup is visible")
+            # Attach page HTML for debugging
+            allure.attach(self.page.content(), name="Page HTML", attachment_type=attachment_type.HTML)
+        except Exception as e:
+            screenshot_path = f"screenshots/tenant_popup_error_{int(time.time())}.png"
+            os.makedirs(os.path.dirname(screenshot_path), exist_ok=True)
+            self.page.screenshot(path=screenshot_path)
+            with open(screenshot_path, "rb") as f:
+                allure.attach(f.read(), name="Tenant Popup Error", attachment_type=attachment_type.PNG)
+            print(f"❌ Error: {e} - Tenant popup is not visible")
+            print(f"Current URL: {self.page.url}")
+            pytest.fail(f"Tenant popup is not visible: {e}")
+
+@severity(severity_level.CRITICAL)
+def test_open_site(page: Page):
+    with step("Initialize page objects"):
+        base = Webpage(page)  # Assuming Webpage class exists
+        login = LoginPage(page)
+        menu = Menus(page)    # Assuming Menus class exists
+        entities = Entities(page)  # Assuming Entities class exists
+        addCompany = AddCompany(page)  # Assuming AddCompany class exists
+
+    with step("Navigate to URL and perform actions"):
+        base.getURL()
+        base.redirectURL()
+        base.keepOpen(10)
+
+    with step("Perform login actions"):
+        login.enterButtonClick()
+        login.tenantPopupVisible()
+```
+
+### Key Improvements in the Code
+1. **Allure Integration**:
+   - Added `@step` decorators to create clear step-by-step reports in Allure.
+   - Used `allure.attach` to include screenshots and page HTML in the report for better debugging.
+   - Added `@severity(severity_level.CRITICAL)` to mark the test’s importance.
+
+2. **Robust Locators**:
+   - Kept the improved locators from the previous response (`button:has-text("Enter")` and `//div[contains(@class, "modal-content")]`).
+
+3. **Enhanced Debugging**:
+   - Attached screenshots and page HTML on both success and failure.
+   - Timestamped screenshots to avoid overwrites.
+   - Logged the current URL on failure.
+
+4. **Fixed Modal Issue**:
+   - Retained the 15-second timeout and small wait after button click to address the tenant modal visibility issue.
+
+### Step 4: Run Tests with Allure
+Execute your tests to generate Allure results:
+
+```bash
+pytest --alluredir=./allure-results --clean-alluredir
+```
+
+- **Output**: This creates an `allure-results` directory with JSON files containing test data, including steps, attachments, and metadata.
+- **Headed Mode for Debugging**: Use `--headed` to watch the browser:
+  ```bash
+  pytest --alluredir=./allure-results --headed
+  ```
+
+### Step 5: Generate and View the Allure Report
+Generate the HTML report from the results and open it in a browser:
+
+```bash
+allure generate ./allure-results -o ./allure-report --clean
+allure open ./allure-report
+```
+
+- **Explanation**:
+  - `generate`: Converts JSON results into an HTML report in the `allure-report` folder.
+  - `--clean`: Removes previous report data to avoid clutter.
+  - `open`: Starts a local server (typically at `http://localhost:8080`) and opens the report.
+- **Report Features**:
+  - Interactive dashboard with pass/fail statistics.
+  - Step-by-step test execution logs.
+  - Attached screenshots and HTML for failed tests.
+  - Severity and trend analysis.
+
+### Step 6: Add Allure Metadata (Optional)
+Enhance reports with metadata like environment details or test categorization:
+
+```python
+import allure
+
+# Add environment info
+allure.dynamic.environment({"OS": "Windows", "Browser": "Chromium", "URL": "https://sp.dev.zoolwork.com"})
+allure.dynamic.feature("Authentication")
+allure.dynamic.story("Tenant Modal Display")
+```
+
+Add this in your test or a fixture. Environment details appear in the report’s “Environment” section.
+
+### Step 7: CI/CD Integration (Optional)
+For continuous integration (e.g., GitHub Actions), add Allure steps to your workflow:
+
+```yaml
+name: Run Playwright Tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: pip install pytest pytest-playwright allure-pytest
+      - run: npm install -g allure-commandline
+      - run: playwright install
+      - run: pytest --alluredir=./allure-results
+      - run: allure generate ./allure-results -o ./allure-report --clean
+      - uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+```
+
+### Troubleshooting
+- **No Allure Results**:
+  - Ensure `--alluredir` is set and the directory is writable.
+  - Check if tests are running (`pytest -v` for verbose output).
+- **Java Not Found**:
+  - Install Java 8+ (`java -version` to verify).
+  - On Windows, ensure `java` is in your PATH.
+- **Modal Still Not Visible**:
+  - Inspect the DOM to confirm the `modal-content` class.
+  - Add `page.pause()` before `tenantPopupVisible` to debug interactively:
+    ```python
+    login.enterButtonClick()
+    page.pause()
+    login.tenantPopupVisible()
+    ```
+- **Allure Command Not Found**:
+  - Use `npx allure` or add `node_modules/.bin` to PATH.
+
+### Expected Output
+- **Console**:
+  ```
+  ✅ Enter button clicked successfully
+  ✅ Tenant popup is visible
+  ```
+  Or, on failure:
+  ```
+  ❌ Error: Locator expected to be visible - Tenant popup is not visible
+  Current URL: https://auth8.dev.zoolwork.com/...
+  ```
+- **Allure Report**: A browser-based report with:
+  - Test steps (e.g., “Click Enter button”, “Verify Tenant popup visibility”).
+  - Screenshots and HTML attachments for failures.
+  - Test status, duration, and severity.
+
+### Additional Notes
+- **Playwright-Specific Features**: If you’re using Playwright’s tracing (`context.tracing`), attach traces to Allure:
+  ```python
+  context.tracing.start(screenshots=True, snapshots=True)
+  # Run test
+  trace_path = "trace.zip"
+  context.tracing.stop(path=trace_path)
+  with open(trace_path, "rb") as f:
+      allure.attach(f.read(), name="Playwright Trace", attachment_type=attachment_type.ZIP)
+  ```
+- **Report Hosting**: For team access, host the `allure-report` folder on a static server or use Allure TestOps (a paid service starting at $39/user).
+- **Documentation**: Refer to the [Allure Pytest docs](https://allurereport.org/docs/pytest/) or [Allure Framework](https://allurereport.org/docs/) for advanced features like custom labels or history tracking.
+
+This setup should resolve your reporting needs and provide detailed insights into your Playwright test failures, including the tenant modal issue. If you hit specific errors, share your `pytest.ini` or test output for further assistance!pip install allure-pytest
+npm install -g allure-commandline

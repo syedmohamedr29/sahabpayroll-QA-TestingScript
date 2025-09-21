@@ -1,0 +1,358 @@
+from playwright.sync_api import Playwright, expect , Page
+import pytest
+import json
+
+loginfile = r"C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\Playwright_Automation\resources\weblogin\loginDetails.json"
+with open(loginfile) as jsonFile:
+    login = json.load(jsonFile)
+
+
+class LoginPage:
+
+    def __init__(self, page: Page):
+        self.page = page
+
+        # Locators
+        self.companyLogo = page.get_by_role("link", name="Connexions - Accounts")
+
+        self.enterButton = page.get_by_text("Enter")
+
+        self.organisationPopup = page.get_by_role("heading", name="Organisation Name")
+
+        self.cancelButton = page.get_by_role("button", name="Cancel")
+
+        self.closeIcon = page.get_by_role("button", name="Close")
+
+        self.tenantNameField = page.get_by_role("textbox", name="Enter your Oranganisation Name")
+
+        self.saveButton = page.get_by_role("button", name=" Save")
+
+        self.usernameField = page.get_by_role("textbox", name="Username or email address")
+
+        self.passwordField = page.get_by_role("textbox", name="Password")
+
+        self.passwordIconVisible = page.locator("#PasswordVisibilityButton")
+
+        self.passwordIconDeVisible = page.locator("#PasswordVisibilityButton")
+
+        self.loginButton = page.locator("button[name=\"Action\"]")
+
+        self.alertPopup = page.get_by_text("× Given tenant doesn't exist")
+
+        self.alertPopupOK = page.get_by_role("button", name="Ok")
+
+        self.rememberMeCheck = page.get_by_role("checkbox", name="Remember me")
+
+        self.rememberMeUncheck = page.get_by_role("checkbox", name="Remember me")
+
+        self.langDropdown = page.get_by_role("button", name="English")
+
+        self.langArabic = page.get_by_role("link", name="العربية")
+
+        self.usernameError = page.get_by_text("The Username or email address")
+
+        self.passwordError = page.get_by_text("The Password field is")
+
+        self.forgotPassword = page.get_by_role("link", name="Forgot password?")
+
+
+
+    def logVisible(self):
+        try:
+            expect(self.companyLogo).to_be_visible(timeout=2000)
+            print("Logo is Visible")
+
+        except Exception as e:
+            print(f"Error: {e} - Logo is not visible - Test Case Failed")
+            pytest.fail("Logo is not visible - Test case failed")
+
+
+    def enterBtnClick(self):
+        try:
+            expect(self.enterButton).to_be_visible(timeout=5000)
+            expect(self.enterButton).to_be_enabled()
+
+            # Click
+            self.enterButton.click()
+            print("✅ Enter Button is Visible and Clickable")
+
+        except Exception as e:
+            print(f"Error: {e} - Enter Button is not visible or not clickable - Test Case Failed")
+            pytest.fail("Enter Button is not visible or not clickable - Test case failed")
+
+    def orgPopupVisible(self):
+        try:
+            expect(self.orgPopup).to_be_visible(timeout=2000), "Organisation Popup is Visible"
+            print("Organisation Popup is Visible")
+        except Exception as e:
+            print(f"Error: {e} - Organisation Popup is not visible - Test Case Failed")
+            pytest.fail("Organisation Popup is not visible - Test case failed")
+
+    def cancelBtnClick(self):
+        try:
+            cancelBtn = self.cancelButton
+            expect(self.cancelBtn).is_visible(), "Cancel Button is Visible"
+            assert cancelBtn.click(), "Cancel Button is Clickable"
+            print("Cancel Button is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Cancel Button is not visible or not clickable - Test Case Failed")
+            pytest.fail("Cancel Button is not visible or not clickable - Test case failed")
+
+    def closeIconClick(self):
+        try:
+            closeIcon = self.closeIcon
+            assert closeIcon.is_visible(), "Close Icon is Visible"
+            assert closeIcon.click(), "Close Icon is Clickable"
+            print("Close Icon is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Close Icon is not visible or not clickable - Test Case Failed")
+            pytest.fail("Close Icon is not visible or not clickable - Test case failed")
+
+    def tenantName(self):
+        try:
+            tenantField = self.tenantNameField
+            assert tenantField.is_visible(), "Tenant Name Field is Visible"
+            assert tenantField.fill(login["OrganisationName"]), "Tenant Name Field is Fillable"
+            print("Tenant Name Field is Visible and Fillable")
+        except Exception as e:
+            print(f"Error: {e} - Tenant Name Field is not visible or not fillable - Test Case Failed")
+            pytest.fail("Tenant Name Field is not visible or not fillable - Test case failed")
+
+    def saveBtnClick(self):
+        try:
+            saveBtn = self.saveButton
+            assert saveBtn.is_visible(), "Save Button is Visible"
+            assert saveBtn.click(), "Save Button is Clickable"
+            print("Save Button is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Save Button is not visible or not clickable - Test Case Failed")
+            pytest.fail("Save Button is not visible or not clickable - Test case failed")
+
+    def username(self):
+        try:
+            userField = self.usernameField
+            assert userField.is_visible(), "Username Field is Visible"
+            assert userField.fill(login["UserName"]), "Username Field is Fillable"
+            print("Username Field is Visible and Fillable")
+        except Exception as e:
+            print(f"Error: {e} - Username Field is not visible or not fillable - Test Case Failed")
+            pytest.fail("Username Field is not visible or not fillable - Test case failed")
+
+    def password(self, password):
+        try:
+            passField = self.passwordField
+            assert passField.is_visible(), "Password Field is Visible"
+            assert passField.fill(login["Password"]), "Password Field is Fillable"
+            print("Password Field is Visible and Fillable")
+        except Exception as e:
+            print(f"Error: {e} - Password Field is not visible or not fillable - Test Case Failed")
+            pytest.fail("Password Field is not visible or not fillable - Test case failed")
+
+    def passwordIconVisibleClick(self):
+        try:
+            passIconVisible = self.passwordIconVisible
+            assert passIconVisible.is_visible(), "Password Visible Icon is Visible"
+            assert passIconVisible.click(), "Password Visible Icon is Clickable"
+            print("Password Visible Icon is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Password Visible Icon is not visible or not clickable - Test Case Failed")
+            pytest.fail("Password Visible Icon is not visible or not clickable - Test case failed")
+
+    def passwordIconDeVisibleClick(self):
+        try:
+            passIconDeVisible = self.passwordIconDeVisible
+            assert passIconDeVisible.is_visible(), "Password DeVisible Icon is Visible"
+            assert passIconDeVisible.click(), "Password DeVisible Icon is Clickable"
+            print("Password DeVisible Icon is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Password DeVisible Icon is not visible or not clickable - Test Case Failed")
+            pytest.fail("Password DeVisible Icon is not visible or not clickable - Test case failed")
+
+    def signin(self):
+        try:
+            loginBtn = self.loginButton
+            assert loginBtn.is_visible(), "Login Button is Visible"
+            assert loginBtn.click(), "Login Button is Clickable"
+            print("Login Button is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Login Button is not visible or not clickable - Test Case Failed")
+            pytest.fail("Login Button is not visible or not clickable - Test case failed")
+
+    def alertPopupVisible(self):
+        try:
+            alertPop = self.alertPopup
+            assert alertPop.is_visible(), "Alert Popup is Visible"
+            print("Alert Popup is Visible")
+        except Exception as e:
+            print(f"Error: {e} - Alert Popup is not visible - Test Case Failed")
+            pytest.fail("Alert Popup is not visible - Test case failed")
+
+    def alertPopupOKClick(self):
+        try:
+            alertPopOK = self.alertPopupOK
+            assert alertPopOK.is_visible(), "Alert Popup OK Button is Visible"
+            assert alertPopOK.click(), "Alert Popup OK Button is Clickable"
+            print("Alert Popup OK Button is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Alert Popup OK Button is not visible or not clickable - Test Case Failed")
+            pytest.fail("Alert Popup OK Button is not visible or not clickable - Test case failed")
+
+    def rememberMeCheckClick(self):
+        try:
+            rememberCheck = self.rememberMeCheck
+            assert rememberCheck.is_visible(), "Remember Me Checkbox is Visible"
+            assert rememberCheck.check(), "Remember Me Checkbox is Checkable"
+            print("Remember Me Checkbox is Visible and Checkable")
+        except Exception as e:
+            print(f"Error: {e} - Remember Me Checkbox is not visible or not checkable - Test Case Failed")
+            pytest.fail("Remember Me Checkbox is not visible or not checkable - Test case failed")
+
+    def rememberMeUncheckClick(self):
+        try:
+            rememberUncheck = self.rememberMeUncheck
+            assert rememberUncheck.is_visible(), "Remember Me Checkbox is Visible"
+            assert rememberUncheck.uncheck(), "Remember Me Checkbox is Uncheckable"
+            print("Remember Me Checkbox is Visible and Uncheckable")
+        except Exception as e:
+            print(f"Error: {e} - Remember Me Checkbox is not visible or not uncheckable - Test Case Failed")
+            pytest.fail("Remember Me Checkbox is not visible or not uncheckable - Test case failed")
+
+    def langDropdownClick(self):
+        try:
+            langDrop = self.langDropdown
+            assert langDrop.is_visible(), "Language Dropdown is Visible"
+            assert langDrop.click(), "Language Dropdown is Clickable"
+            print("Language Dropdown is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Language Dropdown is not visible or not clickable - Test Case Failed")
+            pytest.fail("Language Dropdown is not visible or not clickable - Test case failed")
+
+    def langArabicClick(self):
+        try:
+            langArab = self.langArabic
+            assert langArab.is_visible(), "Arabic Language Option is Visible"
+            assert langArab.click(), "Arabic Language Option is Clickable"
+            print("Arabic Language Option is Visible and Clickable")
+        except Exception as e:
+            print(f"Error: {e} - Arabic Language Option is not visible or not clickable - Test Case Failed")
+            pytest.fail("Arabic Language Option is not visible or not clickable - Test case failed")
+
+    def usernameErrorVisible(self):
+        try:
+            userError = self.usernameError
+            assert userError.is_visible(), "Username Error Message is Visible"
+            print("Username Error Message is Visible")
+        except Exception as e:
+            print(f"Error: {e} - Username Error Message is not visible - Test Case Failed")
+            pytest.fail("Username Error Message is not visible - Test case failed")
+
+    def passwordErrorVisible(self):
+        try:
+            passError = self.passwordError
+            assert passError.is_visible(), "Password Error Message is Visible"
+            print("Password Error Message is Visible")
+        except Exception as e:
+            print(f"Error: {e} - Password Error Message is not visible - Test Case Failed")
+            pytest.fail("Password Error Message is not visible - Test case failed")
+
+
+
+
+-----
+company code - test code
+
+           try:
+            time.sleep(3)
+            self.addCompany.companyEnNameFilling(
+                companyAdd["basicDetails"]["companyName"]["en"]["name"]
+            )
+            time.sleep(3)
+            print("✅ Company English Name entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter En company name: {str(e)}")
+
+        try:
+            self.addCompany.languageDropdown()
+            print("✅ User Can able to click on Language Dropdown successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to Click Language Dropdown: {str(e)}")
+
+        try :
+            time.sleep(3)
+            self.addCompany.firstOption()
+        except Exception as e:
+            pytest.fail(f"❌ Unable to Click Language Dropdown: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.dropdownCloseIconClick()
+        except Exception as e:
+            pytest.fail(f"❌ Unable to Click Close Icon: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.companyArNameFilling(
+                companyAdd["basicDetails"]["companyName"]["ar"]["name"]
+            )
+            time.sleep(3)
+            print("✅ Company Arabic Name entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter company ar name: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.shortCode(
+                companyAdd["basicDetails"]["shortCode"]
+            )
+            time.sleep(3)
+            print("✅ Company Short Code entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter company short code: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.industryDropdown()
+        except Exception as e:
+            pytest.fail(f"❌ Unable to Click Industry Dropdown: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.dropdownSearchBoxFilling("Manufacturing")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to search Industry: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.industryValueSelect()
+        except Exception as e:
+            pytest.fail(f"❌ Unable to Click Industry Dropdown: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.website(
+                companyAdd["basicDetails"]["webSiteUrl"]
+            )
+            time.sleep(3)
+            print("✅ Company Website entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter company website: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.taxId(
+                companyAdd["basicDetails"]["companyTaxID"]
+            )
+            time.sleep(3)
+            print("✅ Company Tax Id entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter company Tax Id: {str(e)}")
+
+        try:
+            time.sleep(3)
+            self.addCompany.companyId(
+                companyAdd["basicDetails"]["companyID"]
+            )
+            time.sleep(3)
+            print("✅ Company Id entered successfully")
+        except Exception as e:
+            pytest.fail(f"❌ Unable to enter company Id: {str(e)}")

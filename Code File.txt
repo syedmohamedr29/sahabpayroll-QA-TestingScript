@@ -1,0 +1,51 @@
+Code File :
+https://portfolio-ideas.vercel.app/portfolio.html
+https://affancoder.github.io/Portfolio_Website/
+https://kdgehlot2003.github.io/Portfolio/
+https://archit-agrawal-portfolio.vercel.app/
+https://www.pravinmane.com/#experience
+
+
+git remote set-url main ssh://git@github.com:ZoolWorks/ZW.AutomatedTesting.git
+
+
+git config --global user.name "syemohamedr29"
+git config --global user.email "syed.mohamed@comm-it.in"
+
+git config --list
+
+git init
+
+git remote add origin https://github.com/ZoolWorks/ZW.AutomatedTesting.git
+
+git remote -v
+
+Code once ready
+
+git add .
+git commit -m 'Employee Delete'
+git push origin syedBranch
+------------------------------------------
+git push origin master:main
+
+git branch -m master main      # Rename branch
+git push -u origin main        # Push and set upstream
+
+git push origin master
+
+git push origin main --force
+
+
+
+--- 
+repo public
+
+git clone https://github.com/syedmohamedr29/Portfolio.git
+
+
+repo private
+
+git clone https://<your-username>:<your-token>@github.com/syedmohamedr29/Portfolio.git
+
+
+ 

@@ -1,0 +1,123 @@
+{
+  "basicDetails": {
+    "serialNo": 1,
+    "sectionName": "Basic Information",
+    "logo": "",
+    "companyName": {
+      "en": {
+        "name": "Mahmood saeed beverage cans & end company limited"
+      },
+      "ar": {
+        "name": "شركة محمود سعيد للمشروبات والعلب المحدودة"
+      }
+    },
+    "companyIndustry": 1,
+    "companyTaxID": "300248651310003",
+    "companyID": "ARST234",
+    "shortCode": "TESEU",
+    "webSiteUrl": "www.mscanco.com"
+  },
+  "contacts": {
+    "serialNo": 2,
+    "sectionName": "Primary",
+    "contact": [
+      {
+        "contactType": 1,
+        "contactName": "Admin",
+        "contactNumber": "97978",
+        "emailId": "admin@Mscei-sa.com",
+        "userId": "admin@Mscei-sa.com"
+      },
+      {
+        "contactType": 1,
+        "contactName": "Admin",
+        "contactNumber": "97978",
+        "emailId": "admin@Mscei-sa.com",
+        "userId": "admin@Mscei-sa.com"
+      }
+    ]
+  },
+  "displaySettings": {
+    "serialNo": 6,
+    "sectionName": "ReviewAndFinish",
+    "enableDecimalRoundOff": false,
+    "dateFormat": {
+      "dateFormat": "DD MMM yyyy",
+      "dateSample": "06 Sep 2024"
+    },
+    "timeFormat": {
+      "timeFormat": "hh:mm tt",
+      "timeSample": "06:55 PM"
+    },
+    "languages": [
+      {
+        "code": "en",
+        "name": "English"
+      },
+      {
+        "code": "ar",
+        "name": "Arabic"
+      }
+    ]
+  },
+  "localeSettings": {
+    "serialNo": 3,
+    "sectionName": "Locale settings",
+    "countryRegion": {
+      "name": "SA",
+      "displayName": "المملكة العربية السعودية",
+      "englishName": "Saudi Arabia",
+      "nativeName": "المملكة العربية السعودية",
+      "geoId": 205,
+      "dialCode": "+966"
+    },
+    "localeSettings": {
+      "serialNo": 6,
+      "sectionName": "ReviewAndFinish",
+      "countryRegion": {
+        "name": "SA",
+        "displayName": "المملكة العربية السعودية",
+        "englishName": "Saudi Arabia",
+        "nativeName": "المملكة العربية السعودية",
+        "geoId": 205,
+        "dialCode": "+966"
+      },
+      "timeZone": {
+        "id": "Asia/Riyadh",
+        "displayName": "(UTC+03:00) Arabian Standard Time (Riyadh)",
+        "standardName": "التوقيت العربي الرسمي",
+        "baseUtcOffset": "03:00:00",
+        "dayLightName": "التوقيت العربي الصيفي",
+        "supportDayLightSavingTime": true
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "ريال سعودي",
+        "currencySymbol": "ر.س.‏",
+        "currencyISOSymbol": "SAR"
+      }
+    },
+    "financialYear": {
+      "startDate": "2025-01-01T00:00:00Z",
+      "endDate": "2025-12-31T00:00:00Z",
+      "financialYear": "1 1 2025 - 31 12 2025 - FY 2025"
+    },
+    "addresses": {
+      "serialNo": 2,
+      "sectionName": "addressInformation",
+      "addresses": [
+        {
+          "addressLine1": "Appstra",
+          "addressLine2": "Jeddah Tower IT Park",
+          "addressType": 1,
+          "city": "Jeddah",
+          "state": "Jedaah",
+          "country": 152,
+          "pinCode": "67462",
+          "geoTag": ","
+        }
+      ]
+    },
+    "isActive": true
+  }
+}
