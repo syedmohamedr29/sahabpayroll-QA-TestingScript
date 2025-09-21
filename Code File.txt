@@ -9,7 +9,7 @@ https://www.pravinmane.com/#experience
 git remote set-url main ssh://git@github.com:ZoolWorks/ZW.AutomatedTesting.git
 
 
-git config --global user.name "syemohamedr29"
+git config --global user.name "syedmohamedr29"
 git config --global user.email "syed.mohamed@comm-it.in"
 
 git config --list
