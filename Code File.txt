@@ -31,10 +31,11 @@ git push origin master:main
 git branch -m master main      # Rename branch
 git push -u origin main        # Push and set upstream
 
+-----------------------------------
 git add .
 git commit -m "Your commit message"
 git push
-
+-----------------------------------
 git push -u origin main --force
 
 

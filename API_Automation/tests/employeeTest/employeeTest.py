@@ -2,7 +2,7 @@ import requests
 import pytest
 from joblib.testing import param
 
-from API_Automation.utils.config_reader import get_auth_token, get_env_variable , get_credentials
+from API_Automation.utils.config import get_auth_token, get_env_variable , get_credentials
 from API_Automation.apis.employeeAPIs.employeeAPI import EmployeeAPI
 
 @pytest.fixture(scope='module')

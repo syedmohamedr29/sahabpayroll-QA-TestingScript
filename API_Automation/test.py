@@ -31,3 +31,6 @@ def test_get_demographic_breakup():
 
     total_employees = [item['totalNoOfEmployees'] for item in data]
     print(total_employees)
+
+
+

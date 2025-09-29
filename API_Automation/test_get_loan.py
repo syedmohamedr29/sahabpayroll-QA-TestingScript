@@ -1,0 +1,35 @@
+import pytest
+from playwright.sync_api import Playwright
+
+@pytest.mark.parametrize("company_id", [
+    "3a1bfc8b-d3a6-8fad-a1e3-cc095d479d38"
+])
+def test_get_loans(playwright: Playwright, company_id):
+    # ✅ Create a new API request context
+    request_context = playwright.request.new_context(
+        base_url="https://compbenefits8.dev.zoolwork.com",  # only base URL here
+        extra_http_headers={
+            "Accept": "application/json",  # better than text/plain for JSON APIs
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg1MTE2QTFFNDg0MkY1MzlGREQzOUE1NDcxQjM4NUQxOTRFM0E5OTciLCJ4NXQiOiJoUkZxSGtoQzlUbjkwNXBVY2JPRjBaVGpxWmMiLCJ0eXAiOiJhdCtqd3QifQ.eyJzdWIiOiIzYTFjNmQ2OC0wMzA0LWViNjQtYjQ2ZC00NGUzNmU3OTc5NzEiLCJ0ZW5hbnRpZCI6IjNhMWJmYzgxLWE3MDctNmZkMy1iODYyLWU1ZjA3OTZkZGYyYSIsInVuaXF1ZV9uYW1lIjoiY2hhbmcuY2hhbmciLCJDb21wYW55SWQiOiIzYTFiZmM4Yi1kM2E2LThmYWQtYTFlMy1jYzA5NWQ0NzlkMzgiLCJFbXBsb3llZUlkIjoiM2ExYzZkNjYtMmM0OC04MDc4LTYxZGYtNGI2OTllYWRhMDY3IiwiRW1wbG95ZWVDb2RlIjoiQVAwMTAxIiwiQWNjZXNzaWJsZUNvbXBhbnlJZHMiOiIzYTFiZmM4Yi1kM2E2LThmYWQtYTFlMy1jYzA5NWQ0NzlkMzgiLCJvaV9wcnN0IjoiV2ViIiwib2lfYXVfaWQiOiIzYTFjNmQ4Mi1jYjBmLWY1N2YtZTg2My0xMmRkMDljZGMwMGQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjaGFuZy5jaGFuZyIsImdpdmVuX25hbWUiOiJDaGFuZyIsImZhbWlseV9uYW1lIjoiQ2hhbmcgUiIsInJvbGUiOiJFbXBsb3llZSIsImVtYWlsIjoieGV4b3BldDc5NEBmYW53bi5jb20iLCJlbWFpbF92ZXJpZmllZCI6IlRydWUiLCJwaG9uZV9udW1iZXIiOiI1OTk3MjM0NTY3IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjoiVHJ1ZSIsImNsaWVudF9pZCI6IldlYiIsIm9pX3Rrbl9pZCI6IjNhMWNhNjdkLWFhZGEtNjI4ZC1jMWJmLWZiYTQxZDY5MzU0ZiIsImF1ZCI6WyJJZGVudGl0eVNlcnZpY2UiLCJTYWFzU2VydmljZSIsIkFkbWluaXN0cmF0aW9uU2VydmljZSIsIkxlYXZlU3ZjIiwiRW1wbG95ZWVTdmMiLCJDb21wYW55U3ZjIiwiQWNjb3VudFNlcnZpY2UiLCJDb21wQmVuZWZpdHNTdmMiXSwic2NvcGUiOiJvZmZsaW5lX2FjY2VzcyBvcGVuaWQgcHJvZmlsZSBlbWFpbCBwaG9uZSBBY2NvdW50U2VydmljZSBJZGVudGl0eVNlcnZpY2UgQWRtaW5pc3RyYXRpb25TZXJ2aWNlIENvbXBhbnlTdmMgU2Fhc1NlcnZpY2UgRW1wbG95ZWVTdmMgQ29tcEJlbmVmaXRzU3ZjIExlYXZlU3ZjIiwianRpIjoiNjhjODRkNDItNzA1Ny00ZTYzLTlkMzUtMGZhZjk3NjNkZDZlIiwiaXNzIjoiaHR0cHM6Ly9hdXRoOC5kZXYuem9vbHdvcmsuY29tLyIsImV4cCI6MTc1OTE0Nzk0OCwiaWF0IjoxNzU5MTI5OTQ4fQ.tSXF7AT7wmz3aAbCbtjGfBSa_4Vhlw08x0gMDCJlEfhrFfWwIdbLcsI26Mh0MlvSOkSJ-ou2TPmNjqShm3ed13T6dFHdSZctnsfPl6J36XujKM4EHi2cC5QxyH3oqzZdizRcm8Lbb9c2bW6Gz_RjZz4ap_9D4IM92OnXpmWi8cYoE59hS_URWeFVtPvThvdS7SpZWkKsgyH8htb0xJ3HAd55r-ejXyyS2YqQukPXD497Po9C28uSrv_tbE36mhAIz0tSwKQyrxGkvOk8hEpkAIZae5ks3b0QVUCl8kria5JBPD3mVzhZEQWwV4kN_T95ajZ3GLn6R5zOkIyXaDnRHg"  # 🔑 Replace with valid token
+        }
+    )
+
+    # ✅ Perform the GET request
+    response = request_context.get(
+        f"/api/CompBenefits/companies/{company_id}/loans"
+    )
+
+    # ✅ Assertions
+    assert response.ok, f"Request failed with status {response.status}"
+    print("Status Code:", response.status)
+
+    json_data = response.json()
+    print("Response JSON Data:", json_data)
+
+    # ✅ Extract employee counts (only if the API response actually has this field)
+    if isinstance(json_data, list):  # API returns list of loan objects?
+        total_employees = [item.get('totalNoOfEmployees') for item in json_data if 'totalNoOfEmployees' in item]
+        print("Employee Counts:", total_employees)
+    else:
+        print("Response is not a list, structure:", type(json_data))

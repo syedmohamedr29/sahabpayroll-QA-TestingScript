@@ -1,0 +1,152 @@
+Got it 👍 — let’s organize your **Playwright API automation project** into a clean, reusable structure. Right now, everything is inside one test file, but for scalability (multiple APIs, multiple companies, authentication handling, reusable request context), we’ll create a proper structure.
+
+Here’s a suggested **project structure**:
+
+```
+Playwright_Api_Automation/
+│── tests/
+│   ├── test_loans.py                 # Your actual test cases
+│   ├── test_employees.py             # Example: tests for employees API
+│
+│── apis/
+│   ├── loan_api.py                   # Loan API methods (GET, POST, etc.)
+│   ├── employee_api.py               # Employee API methods
+│
+│── utils/
+│   ├── api_client.py                 # Playwright request context setup
+│   ├── config.py                     # Loads configs from .env
+│
+│── .env                              # Store tenant, username, password, token
+│── conftest.py                       # Pytest fixtures (setup/teardown)
+│── requirements.txt                  # Dependencies
+```
+
+---
+
+### 📌 1. `.env` file
+
+```env
+BASE_URL=https://compbenefits8.dev.zoolwork.com
+TENANT_NAME=Nexbit
+USERNAME=syed.mohamed@comm-it.in
+PASSWORD=Admin@123
+TOKEN=eyJhbGciOi...   # Your bearer token
+```
+
+---
+
+### 📌 2. `utils/config.py`
+
+```python
+import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
+
+BASE_URL = os.getenv("BASE_URL")
+TENANT_NAME = os.getenv("TENANT_NAME")
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
+TOKEN = os.getenv("TOKEN")
+```
+
+---
+
+### 📌 3. `utils/api_client.py`
+
+```python
+from playwright.sync_api import Playwright
+from utils import config
+
+def create_request_context(playwright: Playwright):
+    """Reusable API request context"""
+    return playwright.request.new_context(
+        base_url=config.BASE_URL,
+        extra_http_headers={
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {config.TOKEN}"
+        }
+    )
+```
+
+---
+
+### 📌 4. `apis/loan_api.py`
+
+```python
+class LoanAPI:
+    ENDPOINT = "/api/CompBenefits/companies/{company_id}/loans"
+
+    @staticmethod
+    def get_loans(request_context, company_id: str):
+        response = request_context.get(LoanAPI.ENDPOINT.format(company_id=company_id))
+        return response
+```
+
+---
+
+### 📌 5. `tests/test_loans.py`
+
+```python
+import pytest
+from utils.api_client import create_request_context
+from apis.loan_api import LoanAPI
+
+@pytest.mark.parametrize("company_id", [
+    "3a1bfc8b-d3a6-8fad-a1e3-cc095d479d38"
+])
+def test_get_loans(playwright, company_id):
+    # Create request context
+    request_context = create_request_context(playwright)
+
+    # Call Loan API
+    response = LoanAPI.get_loans(request_context, company_id)
+
+    # Assertions
+    assert response.ok, f"Request failed with status {response.status}"
+    json_data = response.json()
+    print("Response JSON:", json_data)
+
+    # Extract employee counts if present
+    if isinstance(json_data, list):
+        employees = [item.get("totalNoOfEmployees") for item in json_data if "totalNoOfEmployees" in item]
+        print("Employee Counts:", employees)
+```
+
+---
+
+### 📌 6. `requirements.txt`
+
+```
+pytest
+python-dotenv
+playwright
+```
+
+Run setup once:
+
+```bash
+pip install -r requirements.txt
+playwright install
+```
+
+Run tests:
+
+```bash
+pytest -vs tests/
+```
+
+---
+
+👉 This structure will let you **scale easily**:
+
+* Add new APIs in `/apis/`
+* Centralized auth in `.env`
+* Reuse request context everywhere
+* Cleaner test files in `/tests/`
+
+---
+
+Do you also want me to add **auto-token generation from username/password** (instead of manually pasting the token in `.env`)? That way, your tests won’t break when the token expires.
