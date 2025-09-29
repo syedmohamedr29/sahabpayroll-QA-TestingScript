@@ -1,0 +1,26 @@
+{
+  "employeeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "isWithOpeningBalance": true,
+  "recordSource": 0,
+  "loanCategoryId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "fileAttachments": [
+    {
+      "id": "string",
+      "fileName": "string",
+      "documentType": "string",
+      "fileType": 0,
+      "fileExtension": "string",
+      "description": "string"
+    }
+  ],
+  "repaymentCalculations": {
+    "repaymentMode": 0,
+    "installmentAmount": 0,
+    "loanTenure": 0
+  },
+  "startDate": "2025-09-29T11:02:29.939Z",
+  "loanAmount": 0,
+  "openingBalance": 0,
+  "disbursementDate": "2025-09-29T11:02:29.939Z",
+  "reason": "string"
+}
