@@ -1,0 +1,481 @@
+{
+  "summary": {
+    "totalPausedLoans": 0,
+    "totalPauseScheduledLoans": 0,
+    "totalCreatedPendingProcessing": 0,
+    "totalCreatedPendingDisbursement": 1
+  },
+  "count": 16,
+  "output": [
+    {
+      "id": "3a1cad30-4919-fe21-f5b7-8bb19d8cbd64",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cad31-f950-4fb8-203d-2324665aecaf",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cac6e-81e9-19dd-420e-6d1c46eeafd9",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cad16-01eb-528c-da1c-9f1e0fa11c94",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cacc3-e7d1-9c2f-9bff-471217d54571",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cac6a-b0e0-ff60-9996-f0d67abca52d",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cac34-2547-37ee-ad85-05cbc2003d05",
+      "employeeId": "3a1a6b25-efc6-5083-76ad-467224b8c6dd",
+      "loanApplicationId": null,
+      "employeeName": {
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        },
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        }
+      },
+      "employeeCode": "TR001",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1ca611-5dec-ef93-0bad-c95910116ad8",
+      "employeeId": "3a1a6b25-efc6-5083-76ad-467224b8c6dd",
+      "loanApplicationId": null,
+      "employeeName": {
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        },
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        }
+      },
+      "employeeCode": "TR001",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 20000,
+      "amountSanctioned": 20000,
+      "amountDisbursed": 20000,
+      "totalAmountRePaid": 0,
+      "totalAmountPending": 20000,
+      "disbursementDate": "2025-09-29T00:00:00",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2027-02-28T00:00:00",
+      "reason": null,
+      "loanStatus": 11,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 2
+    },
+    {
+      "id": "3a1cac50-6915-c195-9612-e11180e34bd1",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    },
+    {
+      "id": "3a1cad15-3e3a-e788-11dc-d50a60cfda96",
+      "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+      "loanApplicationId": null,
+      "employeeName": {
+        "ar": {
+          "firstName": "Alan",
+          "lastName": "Evans",
+          "familyName": "Mack",
+          "fullName": "Alan Evans Mack"
+        },
+        "en": {
+          "firstName": "Aaron",
+          "lastName": "Hale",
+          "familyName": "Montgomery",
+          "fullName": "Aaron Hale Montgomery"
+        }
+      },
+      "employeeCode": "B018",
+      "loanCategory": {
+        "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+        "name": {
+          "en": "Home Loan"
+        }
+      },
+      "currency": {
+        "currencyName": "Saudi Riyal",
+        "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+        "currencySymbol": "\u0631.\u0633.\u200f",
+        "currencyISOSymbol": "SAR"
+      },
+      "amountAppliedFor": 10000,
+      "amountSanctioned": 10000,
+      "amountDisbursed": 10000,
+      "totalAmountRePaid": 1000,
+      "totalAmountPending": 9000,
+      "disbursementDate": "2025-09-20T09:46:39.392",
+      "pausedOn": "0001-01-01T00:00:00",
+      "resumeOn": null,
+      "interestRate": 0,
+      "repaymentEndDate": "2026-05-20T09:46:39.392",
+      "reason": "Smoke",
+      "loanStatus": 100,
+      "installmentPaid": 0,
+      "installmentPending": 0,
+      "recordSource": 3
+    }
+  ]
+}

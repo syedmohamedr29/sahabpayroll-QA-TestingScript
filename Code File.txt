@@ -56,4 +56,16 @@ repo private
 git clone https://<your-username>:<your-token>@github.com/syedmohamedr29/Portfolio.git
 
 
+--------------------------------------------
+
+report genarting command
+
+pytest "C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation\tests\LoanTest\test_Loan.py::test_get_loans" --alluredir="C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation\reports\loan"
+
+1. pytest   --alluredir=
+allure generate "C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation\reports\loan" --clean -o "C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation\reports\loan\report"
+2. allure generate
+
+allure open "C:\Users\Comm-IT India\OneDrive - comm-it india pvt ltd\Desktop\SahabPayroll\API_Automation\reports\loan\report"
+3. allure open
  

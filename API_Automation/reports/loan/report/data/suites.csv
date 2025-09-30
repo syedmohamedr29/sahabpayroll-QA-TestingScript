@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1326","test_get_loans[3a1a417d-51c2-bab1-6b7f-5b97cd6a53f8]","API_Automation.tests.LoanTest","Tue Sep 30 20:32:19 IST 2025","passed","Tue Sep 30 20:32:20 IST 2025","","test_Loan","",""
+"","694","test_postLoan[3a1a417d-51c2-bab1-6b7f-5b97cd6a53f8]","API_Automation.tests.LoanTest","Tue Sep 30 20:32:20 IST 2025","passed","Tue Sep 30 20:32:21 IST 2025","","test_Loan","",""
