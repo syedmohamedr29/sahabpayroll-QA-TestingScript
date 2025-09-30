@@ -1,21 +1,10 @@
-import json
+from API_Automation.utils.api_client import BaseClient
 
-class LoanAPI:
-    LandingPage_ENDPOINT = "/api/CompBenefits/companies/{company_id}/loans"
-    PostAPI_ENDPOINT = "/api/CompBenefits/companies/{companyId}/loans"
+class LoanAPI(BaseClient):
+    def get_loans(self, company_id: str):
+        endpoint = f"/api/CompBenefits/companies/{company_id}/loans"
+        return self.get(endpoint)
 
-    @staticmethod
-    def get_loans_LandingPageAPI(request_context, company_id: str):
-        response = request_context.get(LoanAPI.LandingPage_ENDPOINT.format(company_id=company_id))
-        return response
-
-    @staticmethod
-    def loan_POSTAPI(request_context, company_id: str, payload: dict):
-        """
-        Sends a POST request to create a loan for a company.
-        """
-        response = request_context.post(
-            LoanAPI.PostAPI_ENDPOINT.format(companyId=company_id),
-            data=json.dumps(payload)
-        )
-        return response
+    def post_loans(self, company_id: str, payload: dict):
+        endpoint = f"/api/CompBenefits/companies/{company_id}/loans"
+        return self.post(endpoint, payload)
