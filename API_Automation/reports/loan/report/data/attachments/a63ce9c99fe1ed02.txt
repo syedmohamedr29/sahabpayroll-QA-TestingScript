@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "CompBenefitsSvc:InvalidLoanTenure",
+    "message": "Loan Tenure is invalid",
+    "details": null,
+    "data": {},
+    "validationErrors": null
+  }
+}

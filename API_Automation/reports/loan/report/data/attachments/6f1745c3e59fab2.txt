@@ -1,0 +1,16 @@
+{
+  "error": {
+    "code": null,
+    "message": "Your request is not valid!",
+    "details": "The following errors were detected during validation.\n - Outside payroll payment is not allowed when disbursement date is current or future.\n",
+    "data": {},
+    "validationErrors": [
+      {
+        "message": "Outside payroll payment is not allowed when disbursement date is current or future.",
+        "members": [
+          "outsidePayrollPayment"
+        ]
+      }
+    ]
+  }
+}

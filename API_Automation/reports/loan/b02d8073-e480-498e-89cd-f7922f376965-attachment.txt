@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "CompBenefitsSvc:InvalidInstallmentAmount",
+    "message": "Installment amount is invalid",
+    "details": null,
+    "data": {},
+    "validationErrors": null
+  }
+}

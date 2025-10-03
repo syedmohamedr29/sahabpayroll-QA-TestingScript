@@ -1,0 +1,25 @@
+{
+  "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+  "isWithOpeningBalance": false,
+  "loanCategoryId": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+  "fileAttachments": [],
+  "repaymentCalculations": {
+    "repaymentMode": 1,
+    "installmentAmount": 1000,
+    "loanTenure": 0
+  },
+  "startDate": "2025-10-03T09:46:39.392Z",
+  "loanAmount": 10000,
+  "openingBalance": 10000,
+  "disbursementDate": "2025-10-03T09:46:39.392Z",
+  "outsidePayrollPayment": {
+    "payMode": 2,
+    "amountPaid": 10000,
+    "paidOn": "2025-10-03T09:46:39.392Z",
+    "paymentDetails": {},
+    "companyBankAccountId": "3a1a4b70-f465-19be-3508-557c097c661e",
+    "attachments": [],
+    "remarks": "Record pay"
+  },
+  "reason": "Smoke"
+}

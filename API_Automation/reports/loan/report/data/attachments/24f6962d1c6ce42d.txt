@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "CompBenefitsSvc:LoanStartDateCannotBeforeDisbursementDate",
+    "message": "Loan start date cannot be less than disbursement date",
+    "details": null,
+    "data": {},
+    "validationErrors": null
+  }
+}

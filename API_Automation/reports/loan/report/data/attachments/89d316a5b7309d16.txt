@@ -1,0 +1,16 @@
+{
+  "error": {
+    "code": null,
+    "message": "Your request is not valid!",
+    "details": "The following errors were detected during validation.\n - Opening balance is mandatory when disbursement date is in the past.\n",
+    "data": {},
+    "validationErrors": [
+      {
+        "message": "Opening balance is mandatory when disbursement date is in the past.",
+        "members": [
+          "isWithOpeningBalance"
+        ]
+      }
+    ]
+  }
+}

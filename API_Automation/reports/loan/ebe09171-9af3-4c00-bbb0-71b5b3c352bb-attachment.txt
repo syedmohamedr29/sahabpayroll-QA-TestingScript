@@ -1,0 +1,11 @@
+{
+  "error": {
+    "code": "CompBenefitsSvc:CannotAddLoanForClosedCategory",
+    "message": "Cannot add loan for closed category 3a1cbbf7-82cc-18cc-f455-d9515a3d6d3f",
+    "details": null,
+    "data": {
+      "0": "3a1cbbf7-82cc-18cc-f455-d9515a3d6d3f"
+    },
+    "validationErrors": null
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "error": {
+    "code": null,
+    "message": "Your request is not valid!",
+    "details": "The following errors were detected during validation.\n - Opening balance cannot exceed the loan amount.\n",
+    "data": {},
+    "validationErrors": [
+      {
+        "message": "Opening balance cannot exceed the loan amount.",
+        "members": [
+          "openingBalance"
+        ]
+      }
+    ]
+  }
+}

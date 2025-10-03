@@ -1,0 +1,574 @@
+{
+  "tenantId": "3a1a415e-6ea3-a78f-efda-6566b1d228fc",
+  "companyId": "3a1a417d-51c2-bab1-6b7f-5b97cd6a53f8",
+  "companyName": {
+    "en": "Benz",
+    "ar": "\u0628\u0646\u0632"
+  },
+  "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+  "employeePlaceholderId": "3a1b6306-70c1-c921-3302-1ebd2d10e8dc",
+  "employeeCode": "B018",
+  "employeeName": {
+    "ar": {
+      "firstName": "Alan",
+      "lastName": "Evans",
+      "familyName": "Mack",
+      "fullName": "Alan Evans Mack"
+    },
+    "en": {
+      "firstName": "Aaron",
+      "lastName": "Hale",
+      "familyName": "Montgomery",
+      "fullName": "Aaron Hale Montgomery"
+    }
+  },
+  "employeeEmail": "justin39@gmail.com",
+  "gender": 2,
+  "nationality": {
+    "isO2Code": "SA",
+    "countryName": {
+      "en": "Saudi Arabia",
+      "ar": "\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
+      "fr": "Arabie Saoudite"
+    }
+  },
+  "workLocation": {
+    "id": "3a1a4209-9056-a5f4-f7f8-db111c468b52",
+    "name": {
+      "en": "Location 2",
+      "ar": "\u0627\u0644\u0645\u0648\u0642\u0639 2"
+    }
+  },
+  "department": {
+    "id": "3a1a420d-26c3-bce0-5b77-6d17ddddbadc",
+    "name": {
+      "en": "Department 3",
+      "ar": "\u0627\u0644\u0642\u0633\u0645 3"
+    }
+  },
+  "designation": {
+    "id": "3a1a420b-1855-d704-ff73-a01f5da8abe3",
+    "name": {
+      "en": "Designation 3",
+      "ar": "\u0627\u0644\u062a\u0639\u064a\u064a\u0646 3"
+    }
+  },
+  "loanApplicationId": null,
+  "loanCategory": {
+    "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+    "name": {
+      "en": "Home Loan"
+    }
+  },
+  "loanShortCode": "HOMEL",
+  "interestRate": 0,
+  "currency": {
+    "currencyName": "Saudi Riyal",
+    "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+    "currencySymbol": "\u0631.\u0633.\u200f",
+    "currencyISOSymbol": "SAR"
+  },
+  "amountAppliedFor": 10000,
+  "amountSanctioned": 10000,
+  "amountDisbursed": 10000,
+  "totalAmountRePaid": 0,
+  "totalAmountPending": 10000,
+  "openingBalance": 10000,
+  "isWithOpeningBalance": true,
+  "totalInstallments": 10,
+  "pendingInstallments": 10,
+  "reason": "Smoke",
+  "disbursementDate": "2025-09-01T09:46:39.392Z",
+  "approvedDate": "2025-09-01T09:46:39.392Z",
+  "repaymentStartDate": "2025-10-03T09:46:39.392Z",
+  "repaymentEndDate": "2026-07-03T09:46:39.392Z",
+  "disbursementChannel": 2,
+  "outsidePayrollPaymentDetails": {
+    "id": "3a1cbc0b-cbb7-9398-de4c-4dfd5a7940de",
+    "payMode": 2,
+    "amountPaid": 10000,
+    "paidOn": "2025-09-01T09:46:39.392Z",
+    "paymentDetails": {
+      "referenceNo": null,
+      "notes": null
+    },
+    "companyBankAccountId": "3a1a4b70-f465-19be-3508-557c097c661e",
+    "attachments": [],
+    "remarks": "Record pay"
+  },
+  "loanPauseDetails": [],
+  "repaymentCalculations": {
+    "repaymentMode": 1,
+    "installmentAmount": 1000,
+    "loanTenure": 10
+  },
+  "repayments": [
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "0001-01-01T00:00:00",
+      "installmentAmount": 0,
+      "installmentNumber": 0,
+      "repaymentStatus": 7,
+      "repaymentMode": 0,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 10000,
+      "id": "3a1cbc0b-cbc2-a76f-dc86-b14c06a414e4"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-10-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 1,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 9000,
+      "id": "3a1cbc0b-cbc2-1697-34f9-94e392379e19"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-11-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 2,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 8000,
+      "id": "3a1cbc0b-cbc2-c9ee-b997-8c189bb3f592"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-12-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 3,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 7000,
+      "id": "3a1cbc0b-cbc2-fc6a-ba09-cfdbe2986bd6"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-01-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 4,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 6000,
+      "id": "3a1cbc0b-cbc2-49dd-dcb8-35bf3f6720ac"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-02-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 5,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 5000,
+      "id": "3a1cbc0b-cbc2-7194-5989-1a3a7d5a22cf"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-03-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 6,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 4000,
+      "id": "3a1cbc0b-cbc2-cbba-5f12-503c64a8f93d"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-04-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 7,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 3000,
+      "id": "3a1cbc0b-cbc2-5cfb-d102-ec15be0f9252"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-05-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 8,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 2000,
+      "id": "3a1cbc0b-cbc2-79f6-a82e-eef033e0529d"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-06-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 9,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 1000,
+      "id": "3a1cbc0b-cbc2-3ecf-1ad6-34b3cf6fb9f8"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-07-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 10,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 0,
+      "id": "3a1cbc0b-cbc2-c2cd-00b4-8157fa3084ab"
+    }
+  ],
+  "fileAttachments": [],
+  "loanStatus": 100,
+  "recordSource": 3,
+  "id": "3a1cbc0b-cbb7-160c-5fb6-7a8cc61133df"
+}
+{
+  "tenantId": "3a1a415e-6ea3-a78f-efda-6566b1d228fc",
+  "companyId": "3a1a417d-51c2-bab1-6b7f-5b97cd6a53f8",
+  "companyName": {
+    "en": "Benz",
+    "ar": "\u0628\u0646\u0632"
+  },
+  "employeeId": "3a1a4216-46b0-04a4-b877-6309743c6084",
+  "employeePlaceholderId": "3a1b6306-70c1-c921-3302-1ebd2d10e8dc",
+  "employeeCode": "B018",
+  "employeeName": {
+    "ar": {
+      "firstName": "Alan",
+      "lastName": "Evans",
+      "familyName": "Mack",
+      "fullName": "Alan Evans Mack"
+    },
+    "en": {
+      "firstName": "Aaron",
+      "lastName": "Hale",
+      "familyName": "Montgomery",
+      "fullName": "Aaron Hale Montgomery"
+    }
+  },
+  "employeeEmail": "justin39@gmail.com",
+  "gender": 2,
+  "nationality": {
+    "isO2Code": "SA",
+    "countryName": {
+      "en": "Saudi Arabia",
+      "ar": "\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
+      "fr": "Arabie Saoudite"
+    }
+  },
+  "workLocation": {
+    "id": "3a1a4209-9056-a5f4-f7f8-db111c468b52",
+    "name": {
+      "en": "Location 2",
+      "ar": "\u0627\u0644\u0645\u0648\u0642\u0639 2"
+    }
+  },
+  "department": {
+    "id": "3a1a420d-26c3-bce0-5b77-6d17ddddbadc",
+    "name": {
+      "en": "Department 3",
+      "ar": "\u0627\u0644\u0642\u0633\u0645 3"
+    }
+  },
+  "designation": {
+    "id": "3a1a420b-1855-d704-ff73-a01f5da8abe3",
+    "name": {
+      "en": "Designation 3",
+      "ar": "\u0627\u0644\u062a\u0639\u064a\u064a\u0646 3"
+    }
+  },
+  "loanApplicationId": null,
+  "loanCategory": {
+    "id": "3a1a4b6e-16d3-d6e6-9a07-083ac8eb280f",
+    "name": {
+      "en": "Home Loan"
+    }
+  },
+  "loanShortCode": "HOMEL",
+  "interestRate": 0,
+  "currency": {
+    "currencyName": "Saudi Riyal",
+    "currencyNativeName": "\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a",
+    "currencySymbol": "\u0631.\u0633.\u200f",
+    "currencyISOSymbol": "SAR"
+  },
+  "amountAppliedFor": 10000,
+  "amountSanctioned": 10000,
+  "amountDisbursed": 10000,
+  "totalAmountRePaid": 0,
+  "totalAmountPending": 10000,
+  "openingBalance": 10000,
+  "isWithOpeningBalance": true,
+  "totalInstallments": 10,
+  "pendingInstallments": 10,
+  "reason": "Smoke",
+  "disbursementDate": "2025-09-01T09:46:39.392Z",
+  "approvedDate": "2025-09-01T09:46:39.392Z",
+  "repaymentStartDate": "2025-10-03T09:46:39.392Z",
+  "repaymentEndDate": "2026-07-03T09:46:39.392Z",
+  "disbursementChannel": 2,
+  "outsidePayrollPaymentDetails": {
+    "id": "3a1cbc0b-cbb7-9398-de4c-4dfd5a7940de",
+    "payMode": 2,
+    "amountPaid": 10000,
+    "paidOn": "2025-09-01T09:46:39.392Z",
+    "paymentDetails": {
+      "referenceNo": null,
+      "notes": null
+    },
+    "companyBankAccountId": "3a1a4b70-f465-19be-3508-557c097c661e",
+    "attachments": [],
+    "remarks": "Record pay"
+  },
+  "loanPauseDetails": [],
+  "repaymentCalculations": {
+    "repaymentMode": 1,
+    "installmentAmount": 1000,
+    "loanTenure": 10
+  },
+  "repayments": [
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "0001-01-01T00:00:00",
+      "installmentAmount": 0,
+      "installmentNumber": 0,
+      "repaymentStatus": 7,
+      "repaymentMode": 0,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 10000,
+      "id": "3a1cbc0b-cbc2-a76f-dc86-b14c06a414e4"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-10-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 1,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 9000,
+      "id": "3a1cbc0b-cbc2-1697-34f9-94e392379e19"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-11-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 2,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 8000,
+      "id": "3a1cbc0b-cbc2-c9ee-b997-8c189bb3f592"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2025-12-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 3,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 7000,
+      "id": "3a1cbc0b-cbc2-fc6a-ba09-cfdbe2986bd6"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-01-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 4,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 6000,
+      "id": "3a1cbc0b-cbc2-49dd-dcb8-35bf3f6720ac"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-02-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 5,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 5000,
+      "id": "3a1cbc0b-cbc2-7194-5989-1a3a7d5a22cf"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-03-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 6,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 4000,
+      "id": "3a1cbc0b-cbc2-cbba-5f12-503c64a8f93d"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-04-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 7,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 3000,
+      "id": "3a1cbc0b-cbc2-5cfb-d102-ec15be0f9252"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-05-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 8,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 2000,
+      "id": "3a1cbc0b-cbc2-79f6-a82e-eef033e0529d"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-06-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 9,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 1000,
+      "id": "3a1cbc0b-cbc2-3ecf-1ad6-34b3cf6fb9f8"
+    },
+    {
+      "payrollId": "00000000-0000-0000-0000-000000000000",
+      "payRunId": "00000000-0000-0000-0000-000000000000",
+      "installmentDueOn": "2026-07-03T09:46:39.392Z",
+      "installmentAmount": 1000,
+      "installmentNumber": 10,
+      "repaymentStatus": 1,
+      "repaymentMode": 1,
+      "prepaymentDetails": null,
+      "salaryMonth": "0001-01-01T00:00:00",
+      "repaymentDate": "0001-01-01T00:00:00",
+      "amountRepaid": 0,
+      "totalAmountRepaid": 0,
+      "totalAmountRemaining": 0,
+      "id": "3a1cbc0b-cbc2-c2cd-00b4-8157fa3084ab"
+    }
+  ],
+  "fileAttachments": [],
+  "loanStatus": 100,
+  "recordSource": 3,
+  "id": "3a1cbc0b-cbb7-160c-5fb6-7a8cc61133df"
+}

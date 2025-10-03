@@ -1,0 +1,16 @@
+{
+  "error": {
+    "code": null,
+    "message": "Your request is not valid!",
+    "details": "The following errors were detected during validation.\n - The JSON value could not be converted to System.Decimal. Path: $.openingBalance | LineNumber: 0 | BytePositionInLine: 341.\n",
+    "data": {},
+    "validationErrors": [
+      {
+        "message": "The JSON value could not be converted to System.Decimal. Path: $.openingBalance | LineNumber: 0 | BytePositionInLine: 341.",
+        "members": [
+          "$.openingBalance"
+        ]
+      }
+    ]
+  }
+}
