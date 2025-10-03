@@ -1,0 +1,11 @@
+{
+  "error": {
+    "code": "CompBenefitsSvc:EmployeeNotFound",
+    "message": "No employee found with this id 3a1b7246-ea8c-0254-072f-98950a503c31",
+    "details": null,
+    "data": {
+      "0": "3a1b7246-ea8c-0254-072f-98950a503c31"
+    },
+    "validationErrors": null
+  }
+}

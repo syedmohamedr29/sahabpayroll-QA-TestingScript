@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"f8d90e29798eb62e584ec0e50785f15c","name":"Loan Management","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}},{"uid":"4bc71add0c2a091eb9ca2f69bff0cb06","name":"TC_003 - Verify that a loan record can be created for an offboarding employee","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
